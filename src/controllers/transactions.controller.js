@@ -8,4 +8,27 @@ function getTransactions(req, res) {
     message: "get all transactions",
   });
 }
-export default { createTransaction, getTransactions };
+
+function getTransactionByID(req, res) {
+  return res.send({
+    message: `get a transaction by id`,
+  });
+}
+function deleteTransaction(req, res) {
+  return res.send({
+    message: "delete transaction",
+  });
+}
+
+function deleteAllTransactions(req, res) {
+  return res.send({
+    message: "delete all transactions",
+  });
+}
+export default {
+  createTransaction,
+  getTransactions,
+  deleteTransaction,
+  deleteAllTransactions,
+  getTransactionByID,
+};
